@@ -1,0 +1,20 @@
+---
+title: "Dynamic Report"
+output: html_document
+params:
+  arrPlotC: 'NULL'
+  arrPlotInv: 'NULL'
+  arrTable: 'NULL'
+---
+
+```{r}
+params[["arrPlotC"]]
+```
+
+```{r}
+params[["arrPlotInv"]]
+```
+
+```{r}
+params[["arrTable"]]
+```
