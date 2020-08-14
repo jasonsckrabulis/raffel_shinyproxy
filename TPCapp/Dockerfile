@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 RUN R -e "install.packages(c('shiny','rmarkdown'),repos='https://cloud.r-project.org/')"
 
 #app libraries
-Run R -e "install.packages(c(),repos='https://cloud.r-project.org/')"
+Run R -e "install.packages(c('ggplot2','cowplot','gridExtra','grid','knitr'),repos='https://cloud.r-project.org/')"
 
 #copy app to docker image
 RUN mkdir /root/euler
