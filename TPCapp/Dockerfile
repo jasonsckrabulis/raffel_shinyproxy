@@ -21,11 +21,11 @@ RUN R -e "install.packages(c('shiny','rmarkdown'),repos='https://cloud.r-project
 Run R -e "install.packages(c('ggplot2','cowplot','gridExtra','grid','knitr'),repos='https://cloud.r-project.org/')"
 
 #copy app to docker image
-RUN mkdir /root/euler
-COPY euler /root/euler
+RUN mkdir /root/TPCapp
+COPY TPCapp /root/TPCapp
 
 COPY Rprofile.site /usr/lib/R/etc/
 
 EXPOSE 3838
 
-CMD ["R", "-e", "shiny::runApp('/root/euler')"]
+CMD ["R", "-e", "shiny::runApp('/root/TPCapp')"]
